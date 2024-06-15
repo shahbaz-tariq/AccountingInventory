@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--fragment_home-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/new_transaction"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/add_to_cart"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNewTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Transaction"
+        style="@style/tvStyle"
+        app:layout_constraintEnd_toEndOf="@+id/new_transaction"
+        app:layout_constraintStart_toStartOf="@+id/new_transaction"
+        app:layout_constraintTop_toBottomOf="@+id/new_transaction" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/transactions"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/transaction"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/reports"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_transaction" />
+
+    <TextView
+        android:id="@+id/tvTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transactions"
+        style="@style/tvStyle"
+        app:layout_constraintEnd_toEndOf="@+id/transactions"
+        app:layout_constraintStart_toStartOf="@+id/transactions"
+        app:layout_constraintTop_toBottomOf="@+id/transactions" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/reports"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/business_report"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/transactions"
+        app:layout_constraintTop_toTopOf="@+id/transactions" />
+
+    <TextView
+        android:id="@+id/tvReports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reports"
+        style="@style/tvStyle"
+        app:layout_constraintEnd_toEndOf="@+id/reports"
+        app:layout_constraintStart_toStartOf="@+id/reports"
+        app:layout_constraintTop_toBottomOf="@+id/reports" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/products"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/products"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toStartOf="@+id/customers"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transactions" />
+
+    <TextView
+        android:id="@+id/tvProducts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Products"
+        style="@style/tvStyle"
+        app:layout_constraintEnd_toEndOf="@+id/products"
+        app:layout_constraintStart_toStartOf="@+id/products"
+        app:layout_constraintTop_toBottomOf="@+id/products" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/customers"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/customer"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/products"
+        app:layout_constraintTop_toTopOf="@+id/products" />
+
+    <TextView
+        android:id="@+id/tvCustomers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customers"
+        style="@style/tvStyle"
+        app:layout_constraintEnd_toEndOf="@+id/customers"
+        app:layout_constraintStart_toStartOf="@+id/customers"
+        app:layout_constraintTop_toBottomOf="@+id/customers" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
