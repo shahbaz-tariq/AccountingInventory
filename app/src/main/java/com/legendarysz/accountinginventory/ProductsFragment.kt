@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.legendarysz.accountinginventory.databinding.FragmentProductsBinding
 import com.legendarysz.accountinginventory.viewmodel.InventoryViewModel
@@ -29,19 +30,20 @@ class ProductsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val recyclerView = binding.recyclerview
-        val adapter = ProductListAdapter()
-        recyclerView.adapter = adapter
+        val adapter = ProductListAdapter { product ->
+            val action = ProductsFragmentDirections.actionProductsFragmentToEditProductFragment(product.id)
+            findNavController().navigate(action)
+        }
 
-        val layoutManager = LinearLayoutManager(context)
-        recyclerView.layoutManager = layoutManager
+        binding.recyclerview.adapter = adapter
+        binding.recyclerview.layoutManager = LinearLayoutManager(context)
 
         inventoryViewModel.allProducts.observe(viewLifecycleOwner) { products ->
             adapter.submitList(products)
         }
 
         binding.fab.setOnClickListener {
-            // Implement add product logic
+            findNavController().navigate(R.id.action_productsFragment_to_addProductFragment)
         }
     }
 

@@ -10,6 +10,7 @@ import com.legendarysz.accountinginventory.models.Expense
 import com.legendarysz.accountinginventory.models.Product
 import com.legendarysz.accountinginventory.models.Transactions
 
+//InventoryRepository.kt
 class InventoryRepository(private val productDao: ProductDao, private val transactionDao: TransactionsDao, private val customerDao: CustomerDao, private val expenseDao: ExpenseDao) {
 
     val allProducts: LiveData<List<Product>> = productDao.getAllProducts()
@@ -33,5 +34,4 @@ class InventoryRepository(private val productDao: ProductDao, private val transa
         return productDao.getProductById(id)
     }
 
-    // Similar methods for transactions, customers, and expenses
 }

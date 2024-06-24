@@ -43,7 +43,14 @@
         android:id="@+id/productsFragment"
         android:name="com.legendarysz.accountinginventory.ProductsFragment"
         android:label="fragment_products"
-        tools:layout="@layout/fragment_products" />
+        tools:layout="@layout/fragment_products" >
+        <action
+            android:id="@+id/action_productsFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+        <action
+            android:id="@+id/action_productsFragment_to_editProductFragment"
+            app:destination="@id/editProductFragment" />
+    </fragment>
     <fragment
         android:id="@+id/reportsFragment"
         android:name="com.legendarysz.accountinginventory.ReportsFragment"
@@ -54,4 +61,18 @@
         android:name="com.legendarysz.accountinginventory.TransactionsFragment"
         android:label="fragment_transactions"
         tools:layout="@layout/fragment_transactions" />
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.legendarysz.accountinginventory.AddProductFragment"
+        android:label="fragment_add_product"
+        tools:layout="@layout/fragment_add_product" />
+    <fragment
+        android:id="@+id/editProductFragment"
+        android:name="com.legendarysz.accountinginventory.EditProductFragment"
+        android:label="fragment_edit_product"
+        tools:layout="@layout/fragment_edit_product" >
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+    </fragment>
 </navigation>

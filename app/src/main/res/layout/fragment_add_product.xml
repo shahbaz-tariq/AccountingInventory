@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/fragment_add_product.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".AddProductFragment">
+
+    <EditText
+        android:id="@+id/editTextProductName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Product Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextProductPurchasingPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Purchasing Price"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextProductName"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextProductSellingPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Selling Price"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextProductPurchasingPrice"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextProductStockQuantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Stock Quantity"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextProductSellingPrice"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextProductUnit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Unit of Measurement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextProductStockQuantity"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/buttonAddProduct"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Add Product"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextProductUnit"
+        android:layout_marginTop="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
