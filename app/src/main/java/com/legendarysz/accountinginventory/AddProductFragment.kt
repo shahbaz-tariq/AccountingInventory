@@ -12,6 +12,7 @@ import com.legendarysz.accountinginventory.databinding.FragmentAddProductBinding
 import com.legendarysz.accountinginventory.models.Product
 import com.legendarysz.accountinginventory.viewmodel.InventoryViewModel
 
+//AddProductFragment.kt
 class AddProductFragment : Fragment() {
 
     private var _binding: FragmentAddProductBinding? = null

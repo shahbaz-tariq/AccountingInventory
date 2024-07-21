@@ -41,9 +41,5 @@ class HomeFragment : Fragment() {
         binding.products.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_productsFragment)
         }
-
-        binding.customers.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_customersFragment)
-        }
     }
 }

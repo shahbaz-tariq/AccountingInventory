@@ -24,16 +24,8 @@
         <action
             android:id="@+id/action_homeFragment_to_productsFragment"
             app:destination="@id/productsFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_customersFragment"
-            app:destination="@id/customersFragment" />
     </fragment>
 
-    <fragment
-        android:id="@+id/customersFragment"
-        android:name="com.legendarysz.accountinginventory.CustomersFragment"
-        android:label="fragment_customers"
-        tools:layout="@layout/fragment_customers" />
     <fragment
         android:id="@+id/newTransactionFragment"
         android:name="com.legendarysz.accountinginventory.NewTransactionFragment"

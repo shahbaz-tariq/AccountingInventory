@@ -85,7 +85,7 @@
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp"
         android:layout_marginTop="80dp"
-        app:layout_constraintEnd_toStartOf="@+id/customers"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/transactions" />
@@ -99,27 +99,5 @@
         app:layout_constraintEnd_toEndOf="@+id/products"
         app:layout_constraintStart_toStartOf="@+id/products"
         app:layout_constraintTop_toBottomOf="@+id/products" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/customers"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/customer"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/products"
-        app:layout_constraintTop_toTopOf="@+id/products" />
-
-    <TextView
-        android:id="@+id/tvCustomers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Customers"
-        style="@style/tvStyle"
-        app:layout_constraintEnd_toEndOf="@+id/customers"
-        app:layout_constraintStart_toStartOf="@+id/customers"
-        app:layout_constraintTop_toBottomOf="@+id/customers" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

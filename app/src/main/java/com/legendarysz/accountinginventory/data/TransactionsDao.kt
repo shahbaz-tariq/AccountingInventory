@@ -9,6 +9,7 @@ import androidx.room.Query
 import androidx.room.Update
 import com.legendarysz.accountinginventory.models.Transactions
 
+//TransactionsDao.kt
 @Dao
 interface TransactionsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
