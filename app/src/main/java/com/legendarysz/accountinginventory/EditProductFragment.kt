@@ -36,22 +36,22 @@ class EditProductFragment : Fragment() {
 
         inventoryViewModel.getProductById(productId).observe(viewLifecycleOwner) { product ->
             product?.let {
-                binding.productNameEditText.setText(it.name)
-                binding.purchasingPriceEditText.setText(it.purchasingPrice.toString())
-                binding.sellingPriceEditText.setText(it.sellingPrice.toString())
-                binding.stockQuantityEditText.setText(it.stockQuantity.toString())
-                binding.unitOfMeasurementEditText.setText(it.unitOfMeasurement)
+                binding.editProductName.setText(it.name)
+                binding.editProductPurchasingPrice.setText(it.purchasingPrice.toString())
+                binding.editProductSellingPrice.setText(it.sellingPrice.toString())
+                binding.editProductStockQuantity.setText(it.stockQuantity.toString())
+                binding.editProductUnit.setText(it.unitOfMeasurement)
             }
         }
 
-        binding.saveButton.setOnClickListener {
+        binding.buttonUpdateProduct.setOnClickListener {
             val updatedProduct = Product(
                 id = productId,
-                name = binding.productNameEditText.text.toString(),
-                purchasingPrice = binding.purchasingPriceEditText.text.toString().toDouble(),
-                sellingPrice = binding.sellingPriceEditText.text.toString().toDouble(),
-                stockQuantity = binding.stockQuantityEditText.text.toString().toInt(),
-                unitOfMeasurement = binding.unitOfMeasurementEditText.text.toString()
+                name = binding.editProductName.text.toString(),
+                purchasingPrice = binding.editProductPurchasingPrice.text.toString().toDouble(),
+                sellingPrice = binding.editProductSellingPrice.text.toString().toDouble(),
+                stockQuantity = binding.editProductStockQuantity.text.toString().toInt(),
+                unitOfMeasurement = binding.editProductUnit.text.toString()
             )
             inventoryViewModel.updateProduct(updatedProduct)
             findNavController().navigateUp()

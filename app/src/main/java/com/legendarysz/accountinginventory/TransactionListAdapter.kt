@@ -29,15 +29,17 @@ class TransactionListAdapter :
     class TransactionViewHolder(private val binding: ItemTransactionBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(transaction: Transactions) {
-            binding.productIdTextView.text = transaction.productId.toString()
-            binding.productNameTextView.text = transaction.productName
-            binding.quantityTextView.text = transaction.quantity.toString()
-            binding.totalAmountTextView.text = transaction.totalAmount.toString()
-            binding.dateTextView.text = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(
-                Date(transaction.date)
-            )
-            binding.paymentTypeTextView.text = transaction.paymentType
-            binding.payNowTextView.text = if (transaction.payNow) "Yes" else "No"
+            binding.apply {
+                productIdTextView.text = transaction.productId.toString()
+                productNameTextView.text = transaction.productName
+                quantityTextView.text = transaction.quantity.toString()
+                totalAmountTextView.text = transaction.totalAmount.toString()
+                dateTextView.text = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(
+                    Date(transaction.date)
+                )
+                paymentTypeTextView.text = transaction.paymentType
+                payNowTextView.text = if (transaction.payNow) "Yes" else "No"
+            }
         }
     }
 

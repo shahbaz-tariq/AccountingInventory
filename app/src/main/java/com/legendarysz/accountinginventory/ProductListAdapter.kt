@@ -24,11 +24,13 @@ class ProductListAdapter(private val onItemClick: (Product) -> Unit) : ListAdapt
 
     class ProductViewHolder(itemView: View, private val onItemClick: (Product) -> Unit) : RecyclerView.ViewHolder(itemView) {
         private val productName: TextView = itemView.findViewById(R.id.productName)
+        private val productPrice: TextView = itemView.findViewById(R.id.productPrice)
         private val productStock: TextView = itemView.findViewById(R.id.productStock)
 
         fun bind(product: Product) {
             productName.text = product.name
-            productStock.text = "Stock: ${product.stockQuantity}"
+            productPrice.text = product.sellingPrice.toString()
+            productStock.text = product.stockQuantity.toString()
             itemView.setOnClickListener { onItemClick(product) }
         }
     }
