@@ -34,8 +34,4 @@ class InventoryRepository(
     suspend fun insert(transaction: Transactions) {
         transactionDao.insert(transaction)
     }
-
-    suspend fun updateProduct(product: Product) {
-        productDao.update(product)
-    }
 }

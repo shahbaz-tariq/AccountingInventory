@@ -12,7 +12,7 @@ import com.legendarysz.accountinginventory.repository.InventoryRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-//InventoryViewModel.kt
+// InventoryViewModel.kt
 class InventoryViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository: InventoryRepository
@@ -48,11 +48,12 @@ class InventoryViewModel(application: Application) : AndroidViewModel(applicatio
         }
     }
 
-    fun insertTransaction(transaction: Transactions) = viewModelScope.launch(Dispatchers.IO) {
-        repository.insert(transaction)
+    // New method to fetch product synchronously
+    suspend fun getProductByIdSync(id: Int): Product? {
+        return repository.getProductById(id)
     }
 
-    fun updateProductStock(product: Product) = viewModelScope.launch(Dispatchers.IO) {
-        repository.updateProduct(product)
+    fun insertTransaction(transaction: Transactions) = viewModelScope.launch(Dispatchers.IO) {
+        repository.insert(transaction)
     }
 }

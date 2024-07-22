@@ -10,7 +10,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.legendarysz.accountinginventory.HomeFragment"
-        android:label="fragment_home"
+        android:label="Accounting Inventory"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_newTransactionFragment"
@@ -29,12 +29,12 @@
     <fragment
         android:id="@+id/newTransactionFragment"
         android:name="com.legendarysz.accountinginventory.NewTransactionFragment"
-        android:label="fragment_new_transaction"
+        android:label="New Transaction"
         tools:layout="@layout/fragment_new_transaction" />
     <fragment
         android:id="@+id/productsFragment"
         android:name="com.legendarysz.accountinginventory.ProductsFragment"
-        android:label="fragment_products"
+        android:label="Products"
         tools:layout="@layout/fragment_products" >
         <action
             android:id="@+id/action_productsFragment_to_addProductFragment"
@@ -46,22 +46,22 @@
     <fragment
         android:id="@+id/reportsFragment"
         android:name="com.legendarysz.accountinginventory.ReportsFragment"
-        android:label="fragment_reports"
+        android:label="Sales Report"
         tools:layout="@layout/fragment_reports" />
     <fragment
         android:id="@+id/transactionsFragment"
         android:name="com.legendarysz.accountinginventory.TransactionsFragment"
-        android:label="fragment_transactions"
+        android:label="Transactions"
         tools:layout="@layout/fragment_transactions" />
     <fragment
         android:id="@+id/addProductFragment"
         android:name="com.legendarysz.accountinginventory.AddProductFragment"
-        android:label="fragment_add_product"
+        android:label="Add Product"
         tools:layout="@layout/fragment_add_product" />
     <fragment
         android:id="@+id/editProductFragment"
         android:name="com.legendarysz.accountinginventory.EditProductFragment"
-        android:label="fragment_edit_product"
+        android:label="Update Product"
         tools:layout="@layout/fragment_edit_product" >
         <argument
             android:name="productId"
